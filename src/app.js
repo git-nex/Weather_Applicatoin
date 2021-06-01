@@ -8,6 +8,7 @@ const express = require('express')
 
 //console.log(__filename) // specifies the current working file
 const app = express ()
+const port = process.env.PORT || 3000
 // define paths for express config
 const viewsPath = path.join(__dirname,'../templates/views')
 
@@ -116,7 +117,7 @@ app.get('*',(req,res)=>
     })
 
 })
-app.listen(3000, () =>
+app.listen(port, () =>
 {
     console.log('Server is up')
 })
